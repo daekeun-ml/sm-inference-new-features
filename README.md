@@ -33,7 +33,7 @@ SageMaker 멀티 컨테이너 엔드포인트를 사용하면 서로 다른 serv
 - 마이너 버그 개선
 
 ### Hands-on Lab
-- [Module 1](async-inference-cv.ipynb/async-inference-cv.ipynb.ipynb): Amazon SageMaker Asynchronous Endpoints - Computer Vision
+- [Module 1](async-inference-cv/async-inference-cv.ipynb): Amazon SageMaker Asynchronous Endpoints - Computer Vision
 
 ### References
 
