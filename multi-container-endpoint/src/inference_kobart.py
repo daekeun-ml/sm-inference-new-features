@@ -36,6 +36,7 @@ def transform_fn(model, input_data, content_type="application/jsonlines", accept
         logger.info("input text: {}".format(text))  
         
         input_ids = tokenizer.encode(text, return_tensors="pt")
+        input_ids = input_ids.to(device)        
         # Generate Summary Text Ids
         summary_text_ids = model.generate(
             input_ids=input_ids,

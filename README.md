@@ -24,13 +24,22 @@ SageMaker 멀티 컨테이너 엔드포인트를 사용하면 서로 다른 serv
 
 ## 2. Asynchronous Inference (Instance Segmentation)
 
-### Overview
 본 예제 코드는 [AWS AIML Blog](https://aws.amazon.com/ko/blogs/machine-learning/run-computer-vision-inference-on-large-videos-with-amazon-sagemaker-asynchronous-endpoints/)에 공개된 예제 코드를 기반으로 자체적으로 아래 개선점들을 반영하였습니다.
 
 - OpenCV 프로세싱 오류 수정
 - 로컬 환경 디버깅 예시 및 로컬 모드 예시 추가
 - 추론 결괏값 처리 및 시각화 로직 추가
 - 마이너 버그 개선
+
+### Asynchronous Inference Overview
+
+SageMaker 비동기(asynchronous) 추론 엔드포인트는 처리 시간이 수 분 이상 걸릴 수 있는 대규모 입력 페이로드를 사용하는 유즈케이스에 적합합니다.
+AsyncInvokeEndpoint 몌ㅑ
+
+
+- Larger payload: 실시간 엔드포인트에서 허용되는 최대 6MB payload보다 훨씬 큰 payload를 제공하며, 최대 1GB까지 가능합니다.
+- Longer Model Execution Time: 실시간 엔드포인트의 최대 60초 모델 호출 시간 제약이 없습니다.
+- Zero instance: 트래픽이 없을 때 인스턴스 개수를 0개까지 축소 가능하기에 비용을 절감할 수 있습니다.
 
 ### Hands-on Lab
 - [Module 1](async-inference-cv/async-inference-cv.ipynb): Amazon SageMaker Asynchronous Endpoints - Computer Vision
