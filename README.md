@@ -49,6 +49,25 @@ AsyncInvokeEndpoint API를 호출하면 Amazon S3에 payload를 배치하고 별
 - GitHub: https://github.com/aws-samples/amazon-sagemaker-asynchronous-inference-computer-vision
 - Developer Guide: https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html
 
+
+<br>  
+
+## 3. Serverless Inference
+
+### Overview
+
+re:Invent 2020에 소개된 Lambda 컨테이너 기능 지원으로 기존 Lambda에서 수행하기 어려웠던 대용량 머신 모델에 대한 추론을 보다 수월하게 실행할 수 있게 되었습니다. Lambda 컨테이너 이미지를 Amazon ECR(Amazon Elastic Container Registry)에 푸시하였다면 Lambda 함수를 생성하여 직접 컨테이너 이미지를 배포하거나 SageMaker의 API 호출로 Serverless endpoint를 쉽게 배포할 수 있습니다.
+  
+### Hands-on Lab
+- [Module (Computer Vision)](serverless-inference/cv/README.md): Deploy Serverless endpoint - Object Detection (YOLO-v3)
+- [Module (Korean Natural Language Processing)](serverless-inference/kornlp/README.md): Deploy Serverless endpoint - Korean NLP (Sentiment Classification for Naver Movie corpus)
+
+### References
+
+- AWS Lambda의 새로운 기능 — 컨테이너 이미지 지원: https://aws.amazon.com/ko/blogs/korea/new-for-aws-lambda-container-image-support/
+- SageMaker Serverless Inference: https://sagemaker.readthedocs.io/en/stable/overview.html?highlight=lambdamodel#serverless-inference
+- AWS Builders Online - AWS Lambda 컨테이너 이미지 서비스 활용하기 (김태수 SA): https://www.youtube.com/watch?v=tTg9Lp7Sqok
+  
 ## License Summary
 
 This sample code is provided under the MIT-0 license. See the LICENSE file.
